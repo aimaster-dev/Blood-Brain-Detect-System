@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Blood test and scanning report analysis using ai</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link> -->
+    <!-- Favicon-->
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="http://127.0.0.1:5000/static/css/styles.css" rel="stylesheet" />
+    <style>
+        #Box {
+            padding: 25px;
+            background-color: white;
+            height: auto;
+        }
+
+        .row {
+            margin-top: 150px;
+        }
+
+        body {
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <!-- <li class="nav-item"><a class="nav-link" href="#page-top">AUTISM</a></li> -->
+            <a class="navbar-brand h1" href="/leaf">BRAIN MRI SCANNING FOR HEMORRHAGE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/animal">BLOOD CELLS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/leaf">BRAIN HEMORRHAGE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div id="Box">
+                    <center>
+                        <h3>HEMORRHAGE DETECTION</h3>
+                    </center>
+                    <hr>
+                    <br>
+                    <form method="post" action="/leaf">
+
+                        <label for="">input image</label>
+                        <input type="file" class="form-control" name="img2" id="transcript" placeholder="Speak" />
+                        <br>
+                        <input type="submit" value="Submit" class="btn btn-success">
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div id="Box">
+                    <center>
+                        <h3>RESULT</h3>
+                    </center>
+                    <hr>
+                    <br>
+                    {% if cnn_img %}
+                    <img src="{{cnn_img}}" style="width:100%" alt="">
+                    <p>Predicted Result : {{out}}</p>
+                    <p>Accuracy : {{accuracy}}</p>
+                    {% endif %}
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="http://127.0.0.1:5000/static/js/scripts.js"></script>
+
+</body>
+
+</html>
