@@ -32,7 +32,7 @@ Blood Sample of the patient
 
 <img width="314" alt="image" src="https://github.com/user-attachments/assets/15e18195-04fe-4cee-a3cc-1e3fcd4ba9b9">
 
-MRI Image of patient's
+MRI Image of patient
 
 <img width="332" alt="image" src="https://github.com/user-attachments/assets/38c2f090-1012-4b59-8d52-513b0fa0df14"> 
 
