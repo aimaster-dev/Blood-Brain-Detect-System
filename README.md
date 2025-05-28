@@ -1,4 +1,3 @@
-                                                      ABSTRACT
 This  project  integrates  cutting-edge  computer  vision  techniques  used  to   enhance  the 
 medical diagnostics by simultaneously addressing two critical aspects of healthcare—blood 
 sample analysis for leukemia and brain hemorrhage classification in MRI images. Leveraging
