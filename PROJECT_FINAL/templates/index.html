@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <title>Blood test and scanning report analysis using ai</title>
+  <link rel="icon" href="static/css/logo.png" type="image/png">
+  <title>HemoNeuro AI</title>
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link> -->
   <!-- Favicon-->
   <!-- Font Awesome icons (free version)-->
@@ -16,22 +17,104 @@
   <!-- Core theme CSS (includes Bootstrap)-->
   <link href="http://127.0.0.1:5000/static/css/styles.css" rel="stylesheet" />
   <style>
+    body {
+      background: linear-gradient(to right, #e3f2fd, #fce4ec);
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #3f51b5;
+    }
+
+    .navbar .navbar-brand,
+    .navbar .nav-link {
+      color: #fff !important;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
     #form1,
     #form2 {
       display: none;
-      width: 50%;
-      margin: auto;
-      /* border: 1px solid #ddd; */
-      padding: 25px;
-      background-color: rgba(0, 0, 0, 0.70);
+      width: 100%;
+      max-width: 550px;
+      margin: 120px auto 40px;
+      padding: 30px;
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
       text-align: left;
+      transition: all 0.3s ease-in-out;
     }
 
     #form1.active,
     #form2.active {
       display: block;
     }
+
+    h2 {
+      text-align: center;
+      color: #3f51b5;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .form-control {
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+    }
+
+    .btn-success {
+      background-color: #e91e63;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    .btn-success:hover {
+      background-color: #c2185b;
+    }
+
+    hr {
+      width: 80px;
+      border-top: 3px solid #3f51b5;
+      margin: 10px auto 30px;
+    }
+
+    .alert {
+      margin-top: 100px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 576px) {
+      #form1,
+      #form2 {
+        padding: 20px;
+      }
+
+      .navbar .navbar-brand {
+        font-size: 18px;
+      }
+    }
   </style>
+
 </head>
 
 <body id="page-top">
@@ -39,7 +122,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
       <!-- <li class="nav-item"><a class="nav-link" href="#page-top">AUTISM</a></li> -->
-      <a class="navbar-brand h1" href="/">Blood test and scanning report analysis using ai</a>
+      <a class="navbar-brand h1" href="/">HemoNeuro AI</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
@@ -54,10 +137,14 @@
     </div>
   </nav>
   <div class="container">
-    <div class="alert alert-success alert-dismissible">
-      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-      <strong>{{msg}}</strong>
-    </div>
+    {% if msg %}
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>{{ msg }}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    {% endif %}
   </div>
   <!-- Masthead-->
   <header class="masthead">

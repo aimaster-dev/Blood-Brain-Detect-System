@@ -9316,11 +9316,12 @@ header.masthead {
   padding-bottom: 5rem;
   text-align: center;
   color: #fff;
-  background-image: url("https://watermark.lovepik.com/background/20220426/large/lovepik-digital-signal-technology-city-background-image_402159582.jpg");
+  background-image: url("login.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center ;
   background-size: cover;
+  min-height: 1500px;
 }
 
 header.masthead .masthead-subheading {
