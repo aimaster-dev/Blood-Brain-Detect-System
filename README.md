@@ -25,44 +25,7 @@ Architecture diagram for leukemia stages classification
 
 <img width="292" alt="image" src="https://github.com/user-attachments/assets/c952c447-35cf-461d-919c-7f5426055478">
                    
-Architecture diagram forBrain Hemorrhage Detection
-
-
-Blood Sample of the patient 
-
-<img width="314" alt="image" src="https://github.com/user-attachments/assets/15e18195-04fe-4cee-a3cc-1e3fcd4ba9b9">
-
-MRI Image of patient
-
-<img width="332" alt="image" src="https://github.com/user-attachments/assets/38c2f090-1012-4b59-8d52-513b0fa0df14"> 
-
-
-
-Screenshots 
-
-
-<img width="953" alt="image" src="https://github.com/user-attachments/assets/9f087d00-b35b-402d-9cff-407a578e616d">
-
-Home page for the blood sample analysis.
-
-
-
-
-<img width="957" alt="image" src="https://github.com/user-attachments/assets/d00ad0a1-5bcd-4177-80ed-4a06d7da05df">
-
-Home page for the brain hammorrhage detection analysis.
-
-
-
-
-<img width="946" alt="image" src="https://github.com/user-attachments/assets/427a4adc-f528-4197-aaef-495b800de8bc">
-
-Result of blood sample analysis
-
-<img width="947" alt="image" src="https://github.com/user-attachments/assets/6a5e606b-3f5e-4c50-a5a4-9e32cf9975e3">
-
-Result of brain hemmorrhage detection
-
+Architecture diagram for Brain Hemorrhage Detection
 
 
 To run use 
